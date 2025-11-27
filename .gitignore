@@ -1,0 +1,13 @@
+# Binários compilados
+/bin/
+/tmp/
+main
+sistema-faculdade.exe
+
+# Arquivos de Ambiente (NUNCA ENVIE ISSO COM SENHAS REAIS)
+.env
+
+# Editor
+.vscode/
+.idea/
+.DS_Store
