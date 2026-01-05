@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disciplina - Formulário</title>
+    <title>Novo Semestre</title>
     <link href="/css/style.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
@@ -33,48 +33,30 @@
 
     <div class="container fade-in">
         <div class="row justify-content-center">
-            <div class="col-lg-8">
+            <div class="col-lg-6">
                 <div class="card main-card">
                     <div class="card-header">
-                        <h4 class="m-0" id="formTitle">Nova Disciplina</h4>
+                        <h4 class="m-0">Novo Semestre Acadêmico</h4>
                     </div>
                     <div class="card-body p-4">
-                        <form id="disciplineForm">
-                            <input type="hidden" id="disciplineId">
+                        <form id="semesterForm">
 
-                            <div class="row g-3">
-                                <div class="col-md-8">
-                                    <label class="form-label">Nome da Disciplina</label>
-                                    <input type="text" class="form-control" id="name" required>
-                                </div>
-                                <div class="col-md-4">
-                                    <label class="form-label">Código (Sigla)</label>
-                                    <input type="text" class="form-control" id="code" placeholder="Ex: MAT101" required>
-                                </div>
+                            <div class="mb-3">
+                                <label class="form-label">Ano</label>
+                                <input type="number" class="form-control" id="year" placeholder="Ex: 2024" required>
+                            </div>
 
-                                <div class="col-md-4">
-                                    <label class="form-label">Créditos</label>
-                                    <input type="number" class="form-control" id="credits" min="1" required>
-                                </div>
-                                <div class="col-md-4">
-                                    <label class="form-label">Carga Horária (h)</label>
-                                    <input type="number" class="form-control" id="workload_hours" min="1" required>
-                                </div>
-                                <div class="col-md-4">
-                                    <label class="form-label">Departamento</label>
-                                    <select class="form-select" id="department_id" required>
-                                        <option value="" selected disabled>Carregando...</option>
-                                    </select>
-                                </div>
-
-                                <div class="col-12">
-                                    <label class="form-label">Descrição / Ementa</label>
-                                    <textarea class="form-control" id="description" rows="3"></textarea>
-                                </div>
+                            <div class="mb-3">
+                                <label class="form-label">Período</label>
+                                <select class="form-select" id="period" required>
+                                    <option value="" selected disabled>Selecione...</option>
+                                    <option value="1">1º Semestre</option>
+                                    <option value="2">2º Semestre</option>
+                                </select>
                             </div>
 
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
-                                <a href="disciplines.html" class="btn btn-secondary me-md-2">Cancelar</a>
+                                <a href="semesters.html" class="btn btn-secondary me-md-2">Cancelar</a>
                                 <button type="submit" class="btn btn-primary px-4">Salvar</button>
                             </div>
                         </form>
@@ -86,7 +68,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/js/disciplines.js"></script>
+    <script src="/js/semesters.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', initForm);
     </script>

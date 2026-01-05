@@ -27,22 +27,32 @@
             border-left-color: #4e73df;
         }
 
+        /* Azul */
         .border-teachers {
             border-left-color: #1cc88a;
         }
 
+        /* Verde */
         .border-courses {
             border-left-color: #36b9cc;
         }
 
+        /* Ciano */
         .border-disciplines {
             border-left-color: #6f42c1;
         }
 
-        /* Nova cor: Roxo */
+        /* Roxo */
         .border-depts {
             border-left-color: #f6c23e;
         }
+
+        /* Amarelo */
+        .border-semesters {
+            border-left-color: #e74a3b;
+        }
+
+        /* Vermelho (NOVO) */
 
         .text-gray-300 {
             color: #dddfeb !important;
@@ -52,10 +62,16 @@
             color: #5a5c69 !important;
         }
 
-        /* Cor do texto do título do card Disciplinas */
+        /* Cores de Texto Personalizadas */
         .text-purple {
             color: #6f42c1 !important;
         }
+
+        .text-red {
+            color: #e74a3b !important;
+        }
+
+        /* (NOVO) */
     </style>
 </head>
 
@@ -73,6 +89,7 @@
                     <li class="nav-item"><a class="nav-link" href="teachers.html">Professores</a></li>
                     <li class="nav-item"><a class="nav-link" href="courses.html">Cursos</a></li>
                     <li class="nav-item"><a class="nav-link" href="disciplines.html">Disciplinas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="semesters.html">Semestres</a></li>
                     <li class="nav-item"><a class="nav-link" href="departments.html">Departamentos</a></li>
                 </ul>
             </div>
@@ -95,7 +112,9 @@
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                     Gestão de Alunos</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">Acessar Módulo</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                    <span id="count-students">...</span> Alunos
+                                </div>
                             </div>
                             <div class="col-auto">
                                 <i class="bi bi-people-fill display-6 text-secondary"></i>
@@ -113,7 +132,9 @@
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                     Professores</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">Acessar Módulo</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                    <span id="count-teachers">...</span> Professores
+                                </div>
                             </div>
                             <div class="col-auto">
                                 <i class="bi bi-person-workspace display-6 text-secondary"></i>
@@ -131,7 +152,9 @@
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
                                     Cursos</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">Acessar Módulo</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                    <span id="count-courses">...</span> Cursos
+                                </div>
                             </div>
                             <div class="col-auto">
                                 <i class="bi bi-journal-bookmark-fill display-6 text-secondary"></i>
@@ -149,10 +172,32 @@
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-purple text-uppercase mb-1">
                                     Disciplinas</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">Acessar Módulo</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                    <span id="count-disciplines">...</span> Disciplinas
+                                </div>
                             </div>
                             <div class="col-auto">
                                 <i class="bi bi-book-half display-6 text-secondary"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-sm-6 col-12 mb-4">
+                <div class="card main-card dashboard-card border-semesters h-100 py-2"
+                    onclick="window.location='semesters.html'">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-red text-uppercase mb-1">
+                                    Semestres</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                    <span id="count-semesters">...</span> Semestres
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="bi bi-calendar-range display-6 text-secondary"></i>
                             </div>
                         </div>
                     </div>
@@ -167,7 +212,9 @@
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                     Departamentos</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">Acessar Módulo</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                    <span id="count-depts">...</span> Departamentos
+                                </div>
                             </div>
                             <div class="col-auto">
                                 <i class="bi bi-building display-6 text-secondary"></i>
@@ -176,6 +223,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
 
         <div class="row mt-4">

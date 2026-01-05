@@ -3,14 +3,14 @@ package main
 import (
 	"bufio"
 	"database/sql"
+	"fmt"
 	"log"
 	"net/http"
 	"os"
-	"fmt"
-	"strconv"
 	"path/filepath"
 	"sistema-faculdade/internal/data"
 	"sistema-faculdade/internal/handlers"
+	"strconv"
 	"strings"
 
 	_ "github.com/lib/pq"
@@ -29,7 +29,7 @@ func loadEnv() {
 	}
 
 	envPath := filepath.Join(cwd, ".env")
-	
+
 	file, err := os.Open(envPath)
 	if err != nil {
 		log.Println("Erro ao abrir o arquivo .env: ", envPath)
@@ -79,8 +79,10 @@ func main() {
 	courseRepo := data.CourseRepository{DB: db}
 	deptRepo := data.DepartmentRepository{DB: db}
 	disciplineRepo := data.DisciplineRepository{DB: db}
+	semesterRepo := data.SemesterRepository{DB: db}
+	dashboardRepo := data.DashboardRepository{DB: db}
 
-	myHandlers := handlers.NewHandler(studentRepo, teacherRepo, courseRepo, deptRepo, disciplineRepo)
+	myHandlers := handlers.NewHandler(studentRepo, teacherRepo, courseRepo, deptRepo, disciplineRepo, semesterRepo, dashboardRepo)
 
 	app := &application{
 		handlers: myHandlers,
