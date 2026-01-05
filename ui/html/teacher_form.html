@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark mb-4">
@@ -18,10 +20,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="courses.html">Cursos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="departments.html">Departamentos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="teachers.html">Professores</a></li>
                     <li class="nav-item"><a class="nav-link" href="students.html">Alunos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="teachers.html">Professores</a></li>
+                    <li class="nav-item"><a class="nav-link" href="courses.html">Cursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="disciplines.html">Disciplinas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="departments.html">Departamentos</a></li>
                 </ul>
             </div>
         </div>
@@ -37,7 +40,7 @@
                     <div class="card-body p-4">
                         <form id="teacherForm">
                             <input type="hidden" id="teacherId">
-                            
+
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <label class="form-label">Nome Completo</label>
@@ -50,11 +53,13 @@
 
                                 <div class="col-md-6">
                                     <label class="form-label">CPF</label>
-                                    <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" required>
+                                    <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00"
+                                        required>
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label">Telefone</label>
-                                    <input type="text" class="form-control" id="telephone" placeholder="(00) 00000-0000" required>
+                                    <input type="text" class="form-control" id="telephone" placeholder="(00) 00000-0000"
+                                        required>
                                 </div>
 
                                 <div class="col-md-6">
@@ -84,4 +89,5 @@
         document.addEventListener('DOMContentLoaded', initForm);
     </script>
 </body>
+
 </html>

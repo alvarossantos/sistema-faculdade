@@ -35,7 +35,7 @@ CREATE TABLE teachers (
   telephone VARCHAR(20) NOT NULL,
   active BOOLEAN DEFAULT TRUE NOT NULL,
   department_id INT REFERENCES departments(id) ON DELETE RESTRICT,
-  date_contract DATE CHECK (date_contract <= CURRENT_DATE),
+  date_contract DATE NOT NULL CHECK (date_contract <= CURRENT_DATE),
   created_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP NOT NULL,
   updated_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP NOT NULL
 );

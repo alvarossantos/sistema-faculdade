@@ -9,6 +9,7 @@ type Handler struct {
 	Teachers    data.TeacherRepository
 	Courses     data.CourseRepository
 	Departments data.DepartmentRepository
+	Disciplines data.DisciplineRepository
 }
 
 func NewHandler(
@@ -16,11 +17,13 @@ func NewHandler(
 	t data.TeacherRepository,
 	c data.CourseRepository,
 	d data.DepartmentRepository,
+	disc data.DisciplineRepository,
 ) *Handler {
 	return &Handler{
 		Students:    s,
 		Teachers:    t,
 		Courses:     c,
 		Departments: d,
+		Disciplines: disc,
 	}
 }

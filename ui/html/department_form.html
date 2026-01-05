@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Novo Departamento</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark mb-4">
         <div class="container">
@@ -15,10 +17,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="courses.html">Cursos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="departments.html">Departamentos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="teachers.html">Professores</a></li>
                     <li class="nav-item"><a class="nav-link" href="students.html">Alunos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="teachers.html">Professores</a></li>
+                    <li class="nav-item"><a class="nav-link" href="courses.html">Cursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="disciplines.html">Disciplinas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="departments.html">Departamentos</a></li>
                 </ul>
             </div>
         </div>
@@ -28,7 +31,9 @@
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="card main-card">
-                    <div class="card-header"><h4 class="m-0">Novo Departamento</h4></div>
+                    <div class="card-header">
+                        <h4 class="m-0">Novo Departamento</h4>
+                    </div>
                     <div class="card-body p-4">
                         <form id="deptForm">
                             <div class="mb-3">
@@ -37,7 +42,8 @@
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Sigla</label>
-                                <input type="text" class="form-control" id="abbreviation" placeholder="Ex: CEX" required>
+                                <input type="text" class="form-control" id="abbreviation" placeholder="Ex: CEX"
+                                    required>
                             </div>
                             <div class="d-flex justify-content-end mt-4 gap-2">
                                 <a href="departments.html" class="btn btn-secondary">Cancelar</a>
@@ -53,4 +59,5 @@
     <script src="js/departments.js"></script>
     <script>document.addEventListener('DOMContentLoaded', initForm);</script>
 </body>
+
 </html>

@@ -25,6 +25,12 @@ func (app *application) routes() *http.ServeMux {
 	mux.HandleFunc("DELETE /api/teachers/{id}", app.handlers.DeleteTeacherHandler)
 	mux.HandleFunc("PATCH /api/teachers/{id}/activate", app.handlers.ActivateTeacherHandler)
 
+	mux.HandleFunc("POST /api/disciplines", app.handlers.CreateDisciplinesHandler)
+	mux.HandleFunc("GET /api/disciplines", app.handlers.GetAllDisciplinesHandler)
+	mux.HandleFunc("GET /api/disciplines/{id}", app.handlers.GetDisciplineByIDHandler)
+	mux.HandleFunc("PUT /api/disciplines/{id}", app.handlers.UpdateDisciplineHandler)
+	mux.HandleFunc("DELETE /api/disciplines/{id}", app.handlers.DeleteDisciplineHandler)
+	
 	// Servidor de arquivos para o frontend
 	// Servir CSS
 	mux.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("ui/static/css"))))

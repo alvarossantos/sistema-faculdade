@@ -106,9 +106,7 @@ func (h *Handler) UpdateStudentHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Erro ao ler JSON: "+err.Error(), http.StatusBadRequest)
 		return
 	}
-
-	// O JSON pode não ter vindo com o ID preenchido ou errado
-	// Deve garantir que o ID do objeto é o mesmo da URL
+	// Garantir que o ID da struct seja o da URL
 	input.ID = id
 
 	// Chama o banco
