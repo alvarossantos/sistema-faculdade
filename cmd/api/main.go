@@ -81,8 +81,9 @@ func main() {
 	disciplineRepo := data.DisciplineRepository{DB: db}
 	semesterRepo := data.SemesterRepository{DB: db}
 	dashboardRepo := data.DashboardRepository{DB: db}
+	offerRepo := data.OfferRepository{DB: db}
 
-	myHandlers := handlers.NewHandler(studentRepo, teacherRepo, courseRepo, deptRepo, disciplineRepo, semesterRepo, dashboardRepo)
+	myHandlers := handlers.NewHandler(studentRepo, teacherRepo, courseRepo, deptRepo, disciplineRepo, semesterRepo, dashboardRepo, offerRepo)
 
 	app := &application{
 		handlers: myHandlers,

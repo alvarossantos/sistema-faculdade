@@ -91,9 +91,9 @@ CREATE TABLE discipline_offers (
   semester_id INT REFERENCES academic_semesters(id) ON DELETE CASCADE,
   teacher_id INT REFERENCES teachers(id) ON DELETE RESTRICT,
   schedule VARCHAR(100) NOT NULL,
-  UNIQUE(discipline_id, semester_id)
+  class_code VARCHAR(10) DEFAULT 'A' NOT NULL, -- Nova Coluna
+  UNIQUE(discipline_id, semester_id, class_code) -- Nova Regra de Unicidade
 );
-
 -- =========================================================
 -- STATUS POSSÍVEL DO ALUNO NA DISCIPLINA
 -- =========================================================

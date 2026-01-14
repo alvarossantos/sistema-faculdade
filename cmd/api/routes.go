@@ -35,6 +35,10 @@ func (app *application) routes() *http.ServeMux {
 	mux.HandleFunc("GET /api/semesters", app.handlers.GetAllSemestersHandler)
 	mux.HandleFunc("DELETE /api/semesters/{id}", app.handlers.DeleteSemesterHandler)
 
+	mux.HandleFunc("GET /api/offers", app.handlers.GetAllOffersHandler)
+	mux.HandleFunc("POST /api/offers", app.handlers.CreateOfferHandler)
+	mux.HandleFunc("DELETE /api/offers/{id}", app.handlers.DeleteOfferHandler)
+
 	mux.HandleFunc("GET /api/dashboard/stats", app.handlers.GetDashboardStatsHandler)
 	// Servidor de arquivos para o frontend
 	// Servir CSS
